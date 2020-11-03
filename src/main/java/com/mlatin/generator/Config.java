@@ -1,9 +1,10 @@
 package com.mlatin.generator;
 
 /**
- * @author Erwin Feng
- * @since 2019-04-17 12:04
- */
+* @Author: Lu Fu
+* @Date: 2020/11/4 01:51
+* @Description:
+*/
 public class Config {
 
     public static String JAVA_PATH = "src.main.java.com.mlatin";
