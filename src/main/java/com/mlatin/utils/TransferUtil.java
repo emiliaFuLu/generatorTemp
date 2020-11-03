@@ -7,15 +7,15 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Author: yuyong
- * Date: 2018-03-23 下午3:32
- * Description: pojo,dto,vo之间的转换
- */
+* @Author: Lu Fu
+* @Date: 2020/11/4 00:10
+* @Description: dao,dto,vo之间的转换
+*/
 public class TransferUtil {
 
-    /**
-     * page
-     */
+//    /**
+//     * page
+//     */
 //    public static <T extends PageResponse> T transfer(Page page, T response){
 //        response.setPageSize(page.getSize());
 //        response.setSize(page.getPages());
@@ -86,10 +86,10 @@ public class TransferUtil {
     }
 
     /**
-     * Author: yuyong
-     * Date: 2018/3/23 下午3:51
-     * Description: list结构的pojo到vo的映射
-     */
+    * @Author: Lu Fu
+    * @Date: 2020/11/4 00:11
+    * @Description: list结构的pojo到vo的映射
+    */
     public static <T1,T2> List<T2> copyList(List<T1> pojoList,  Class<T2> voClass){
         //初始化要返回的list
         List<T2> voList = new ArrayList<>();
@@ -103,10 +103,10 @@ public class TransferUtil {
     }
 
     /**
-     * Author: yuyong
-     * Date: 2018/3/23 下午3:43
-     * Description: 复制字段的值
-     */
+    * @Author: Lu Fu
+    * @Date: 2020/11/4 00:11
+    * @Description: 复制字段的值
+    */
     public static void copyField(Field pojoField, Field voField, Object pojo, Object vo){
         try {
             //获取pojo数据字段的值
@@ -124,10 +124,10 @@ public class TransferUtil {
     }
 
     /**
-     * Author: yuyong
-     * Date: 2018/4/26 下午8:17
-     * Description: 获取包括父类所有字段
-     */
+    * @Author: Lu Fu
+    * @Date: 2020/11/4 00:11
+    * @Description: 获取包括父类所有字段
+    */
     private static Field[] getAllFields(Class clas){
         List<Field> fieldList = new ArrayList<>();
         while (clas != null) {//当父类为null的时候说明到达了最上层的父类(Object类).
