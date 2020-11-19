@@ -41,7 +41,7 @@ public class BaseModel<T extends Model<T>> extends Model<T> {
      * 更新时间
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 
 
     @Override
@@ -62,6 +62,6 @@ public class BaseModel<T extends Model<T>> extends Model<T> {
     }
 
     public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
+        this.updatedAt = updatedAt;
     }
 }

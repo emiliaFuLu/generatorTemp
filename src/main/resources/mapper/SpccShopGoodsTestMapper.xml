@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlatin.codegen.mapper.SpccShopGoodsTestDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlatin.codegen.entity.SpccShopGoodsTest">
+        <result column="id" property="id" />
+        <result column="archive" property="archive" />
+        <result column="goodsNo" property="goodsNo" />
+        <result column="customerID" property="customerID" />
+        <result column="jurisdiction" property="jurisdiction" />
+        <result column="agentId" property="agentId" />
+        <result column="description" property="description" />
+        <result column="descImg" property="descImg" />
+        <result column="display" property="display" />
+        <result column="online" property="online" />
+        <result column="onlineTime" property="onlineTime" />
+        <result column="weight" property="weight" />
+        <result column="mainGoods" property="mainGoods" />
+        <result column="fxStatus" property="fxStatus" />
+        <result column="fxMoney" property="fxMoney" />
+        <result column="fxPoint" property="fxPoint" />
+        <result column="fxEst" property="fxEst" />
+        <result column="stockNum" property="stockNum" />
+        <result column="createdAt" property="createdAt" />
+        <result column="updatedAt" property="updatedAt" />
+        <result column="saleNum" property="saleNum" />
+        <result column="balancePrice" property="balancePrice" />
+    </resultMap>
+
+</mapper>

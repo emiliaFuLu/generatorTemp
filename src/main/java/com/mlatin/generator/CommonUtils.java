@@ -66,7 +66,7 @@ public class CommonUtils {
                 .setFileOverride(true) // 是否覆盖已有文件
                 .setOpen(true) // 是否打开输出目录
                 .setDateType(DateType.TIME_PACK) // 时间采用java 8，（操作工具类：JavaLib => DateTimeUtils）
-                .setActiveRecord(true)// 不需要ActiveRecord特性的请改为false
+                .setActiveRecord(false)// 不需要ActiveRecord特性的请改为false
                 .setEnableCache(false)// XML 二级缓存
                 .setBaseResultMap(true)// XML ResultMap
                 .setBaseColumnList(false)// XML columList
@@ -75,7 +75,7 @@ public class CommonUtils {
 //                .setEntityName(Config.FILE_NAME_MODEL)
                 .setIdType(IdType.INPUT) // 主键类型
                 .setMapperName("%sDao")
-                .setXmlName("%sXML")
+                .setXmlName("%sMapper")
                 .setServiceName("%sService")
                 .setServiceImplName("%sServiceImpl")
                 .setControllerName("%sController");

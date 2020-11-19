@@ -10,24 +10,24 @@ spring:
 mybatis-plus:
   # xml
   mapper-locations: classpath:mapper/*Mapper.xml
-  # \u5B9E\u4F53\u7C7B\u626B\u63CF\uFF0C\u591A\u4E2A\u7684\u8BDD\u7528\u9017\u53F7\u6216\u8005\u5206\u53F7\u9694\u5F00\u9694\u5F00
-  type-aliases-package: com.mlatin.spcc.entity
-  # \u679A\u4E3E\u626B\u63CF\u7C7B  # \u652F\u6301\u7EDF\u914D\u7B26 * \u6216\u8005 ; \u5206\u5272
-  type-enums-package:  com.mlatin.spcc.enums
+  # 实体类扫描，多个的话用逗号或者分号隔开隔开
+  type-aliases-package: com.mlatin.codegen.entity
+  # 枚举扫描类  # 支持统配符 * 或者 ; 分割
+  type-enums-package:  com.mlatin.enums
   global-config:
     db-config:
-      #\u4E3B\u952E\u7C7B\u578B  0:"\u6570\u636E\u5E93ID\u81EA\u589E", 1:"\u672A\u8BBE\u7F6E",2:"\u7528\u6237\u8F93\u5165ID", 3:"\u5206\u914DID (\u4E3B\u952E\u7C7B\u578B\u4E3Anumber\u6216string\uFF09";
+      #主键类型  0:"数据库ID自增", 1:"未设置",2:"用户输入ID", 3:"分配ID (主键类型为number或string）";
       id-type: id_worker
-      #\u5B57\u6BB5\u7B56\u7565 0:"\u5FFD\u7565\u5224\u65AD",1:"\u975E NULL \u5224\u65AD"),2:"\u975E\u7A7A\u5224\u65AD"
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
       field-strategy: NOT_EMPTY
-      #\u903B\u8F91\u5220\u9664\u5B57\u6BB5  \u9ED8\u8BA4\u65E0\uFF0C\u8BBE\u7F6E\u56DE\u81EA\u52A8\u626B\u63CF\u8BE5\u5B57\u6BB5
+      #逻辑删除字段  默认无，设置回自动扫描该字段
       #      logic-delete-field:
-      #\u903B\u8F91\u5220\u9664\u914D\u7F6E
+      #逻辑删除配置
       logic-delete-value: 1
       logic-not-delete-value: 0
       db-type: mysql
 
-      #\u5237\u65B0mapper \u8C03\u8BD5\u795E\u5668
+      #刷新mapper 调试神器
       refresh-mapper: true
 
   configuration:

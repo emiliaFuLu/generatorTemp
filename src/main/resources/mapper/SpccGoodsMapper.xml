@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlatin.codegen.mapper.SpccGoodsDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlatin.codegen.entity.SpccGoods">
+        <result column="id" property="id" />
+        <result column="archive" property="archive" />
+        <result column="goodsNo" property="goodsNo" />
+        <result column="goodsName" property="goodsName" />
+        <result column="title" property="title" />
+        <result column="description" property="description" />
+        <result column="mainImg" property="mainImg" />
+        <result column="otherDesc" property="otherDesc" />
+        <result column="year" property="year" />
+        <result column="season" property="season" />
+        <result column="category" property="category" />
+        <result column="category2" property="category2" />
+        <result column="range" property="range" />
+        <result column="sex" property="sex" />
+        <result column="brand" property="brand" />
+        <result column="wave" property="wave" />
+        <result column="adapt" property="adapt" />
+        <result column="display" property="display" />
+        <result column="online" property="online" />
+        <result column="onlineTime" property="onlineTime" />
+        <result column="erp" property="erp" />
+        <result column="unitPrice" property="unitPrice" />
+        <result column="minPrice" property="minPrice" />
+        <result column="maxPrice" property="maxPrice" />
+        <result column="fareID" property="fareID" />
+        <result column="mainSkc" property="mainSkc" />
+        <result column="jurisdiction" property="jurisdiction" />
+        <result column="agentId" property="agentId" />
+        <result column="fxStatus" property="fxStatus" />
+        <result column="fxMoney" property="fxMoney" />
+        <result column="fxPoint" property="fxPoint" />
+        <result column="fxEst" property="fxEst" />
+        <result column="createdAt" property="createdAt" />
+        <result column="updatedAt" property="updatedAt" />
+        <result column="weight" property="weight" />
+        <result column="fictitious" property="fictitious" />
+    </resultMap>
+
+</mapper>

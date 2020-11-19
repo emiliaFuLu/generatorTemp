@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mlatin.codegen.mapper.SpccGoodsSkuDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mlatin.codegen.entity.SpccGoodsSku">
+        <result column="id" property="id" />
+        <result column="archive" property="archive" />
+        <result column="goodsNo" property="goodsNo" />
+        <result column="colorID" property="colorID" />
+        <result column="size" property="size" />
+        <result column="skuCode" property="skuCode" />
+        <result column="createdAt" property="createdAt" />
+        <result column="updatedAt" property="updatedAt" />
+    </resultMap>
+
+</mapper>
