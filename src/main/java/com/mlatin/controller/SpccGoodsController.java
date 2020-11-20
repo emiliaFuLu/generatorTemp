@@ -1,6 +1,8 @@
 package com.mlatin.controller;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.mlatin.codegen.entity.SpccGoods;
 import com.mlatin.common.reponse.BaseResponse;
 import com.mlatin.facade.GoodsFacade;
 import com.mlatin.vo.SpccGoodsVo;
@@ -25,8 +27,10 @@ public class SpccGoodsController extends BaseController {
     private GoodsFacade goodsFacade;
 
     @GetMapping("/spccGoods/list")
-    public BaseResponse<List<SpccGoodsVo>> list() {
-        return new BaseResponse<>(goodsFacade.list());
+    public BaseResponse<List<SpccGoods>> list() {
+        Page list = goodsFacade.list(1, 500);
+        List<SpccGoods> records = list.getRecords();
+        return new BaseResponse<>(records);
     }
 
 }
