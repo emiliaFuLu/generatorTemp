@@ -36,3 +36,6 @@ mybatis-plus:
 
 logging:
   config: classpath:logback-spring.xml
+
+# 去除启动信息打印的 CONDITIONS EVALUATION REPORT
+logging.level.org.springframework.boot.autoconfigure: ERROR

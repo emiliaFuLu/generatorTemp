@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.incrementer.IKeyGenerator;
 import com.baomidou.mybatisplus.extension.incrementer.H2KeyGenerator;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
+import com.baomidou.mybatisplus.mapper.AutoSqlInjector;
 import com.baomidou.mybatisplus.mapper.ISqlInjector;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
@@ -36,13 +37,13 @@ public class MybatisPlusConfig {
         return new H2KeyGenerator();
     }
 
-//    /**
-//     * 注入sql注入器
-//     */
-//    @Bean
-//    public ISqlInjector sqlInjector() {
-//        return new LogicSqlInjector();
-//    }
+    /**
+     * 注入sql注入器
+     */
+    @Bean
+    public ISqlInjector sqlInjector() {
+        return new AutoSqlInjector();
+    }
 
     /**
      * 分页插件

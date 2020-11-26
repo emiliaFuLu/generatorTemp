@@ -2,10 +2,11 @@
 #spring
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mstar
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://localhost:3306/mstar
     username: root
     password: root
+    type: com.alibaba.druid.pool.DruidDataSource
 
 mybatis-plus:
   configuration:

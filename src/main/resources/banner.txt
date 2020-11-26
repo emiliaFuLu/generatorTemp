@@ -8,3 +8,4 @@ ${AnsiColor.BRIGHT_YELLOW}
 
 
 :: Spring Boot :: ${spring-boot.version}
+

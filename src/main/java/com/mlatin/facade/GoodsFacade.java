@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.mapper.Condition;
 import com.baomidou.mybatisplus.mapper.Wrapper;
+import com.google.gson.Gson;
 import com.mlatin.codegen.entity.SpccGoods;
 import com.mlatin.codegen.entity.SpccShopGoods;
 import com.mlatin.service.SpccGoodsService;
@@ -15,6 +16,7 @@ import com.mlatin.service.SpccShopGoodsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,9 +39,9 @@ public class GoodsFacade {
     public Page list(int pageNo, int pageSize) {
 
         QueryWrapper<SpccShopGoods> queryWrapper = new QueryWrapper<>();
-        Page page = spccShopGoodsService.page(new Page<>(1, 500), queryWrapper
+        Page page = spccShopGoodsService.page(new Page<>(1, 10), queryWrapper
                 .select("goodsNo")
-                .eq("customerId","HZXX001")
+                .eq("customerId","JNYHC01")
                 .eq("online",true)
                 .eq("display",true)
         );

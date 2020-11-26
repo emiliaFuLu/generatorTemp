@@ -22,9 +22,12 @@
 
     <!-- 控制台输出 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+<!--        <encoder>-->
+<!--            <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>-->
+<!--            <charset>UTF-8</charset> &lt;!&ndash; 此处设置字符集 &ndash;&gt;-->
+<!--        </encoder>-->
         <encoder>
-            <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
-            <charset>UTF-8</charset> <!-- 此处设置字符集 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight([%level]) %magenta(%logger{26}) - %cyan(%msg%n)</pattern>
         </encoder>
         <!--此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息-->
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
