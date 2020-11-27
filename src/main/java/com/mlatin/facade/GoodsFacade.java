@@ -37,7 +37,6 @@ public class GoodsFacade {
     private SpccShopGoodsService spccShopGoodsService;
 
     public Page list(int pageNo, int pageSize) {
-
         QueryWrapper<SpccShopGoods> queryWrapper = new QueryWrapper<>();
         Page page = spccShopGoodsService.page(new Page<>(1, 10), queryWrapper
                 .select("goodsNo")

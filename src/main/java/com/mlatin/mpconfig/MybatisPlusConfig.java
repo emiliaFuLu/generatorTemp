@@ -1,4 +1,4 @@
-package com.mlatin.config;
+package com.mlatin.mpconfig;
 
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;

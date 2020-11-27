@@ -27,7 +27,7 @@
 <!--            <charset>UTF-8</charset> &lt;!&ndash; 此处设置字符集 &ndash;&gt;-->
 <!--        </encoder>-->
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight([%level]) %magenta(%logger{26}) - %cyan(%msg%n)</pattern>
+            <pattern>%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight([%level]) %magenta(%logger{26}) - %cyan(%msg%n)</pattern>
         </encoder>
         <!--此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息-->
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -175,14 +175,14 @@
     <logger name="org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor" level="INFO"/>
 
     <!--开发环境:打印控制台-->
-    <springProfile name="dev">
+    <springProfile name="local">
         <root level="debug">
             <appender-ref ref="CONSOLE"/>
         </root>
     </springProfile>
 
     <!--测试环境:打印控制台和输出到文件-->
-    <springProfile name="test">
+    <springProfile name="dev">
         <root level="info">
             <appender-ref ref="CONSOLE"/>
             <appender-ref ref="INFO_FILE"/>

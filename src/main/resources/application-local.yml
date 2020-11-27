@@ -2,11 +2,13 @@
 #spring
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mstar?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://localhost:3306/mstar
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      test-while-idl: false
 
   redis:
     database: 0
@@ -20,7 +22,6 @@ spring:
         max-wait: -1
         max-idle: 8
         min-idle: 0
-
 
 mybatis-plus:
   configuration:

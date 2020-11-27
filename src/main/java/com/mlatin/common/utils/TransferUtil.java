@@ -1,6 +1,9 @@
 package com.mlatin.common.utils;
 
 
+import com.baomidou.mybatisplus.plugins.Page;
+import com.mlatin.common.reponse.PageResponse;
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,37 +16,37 @@ import java.util.List;
 */
 public class TransferUtil {
 
-//    /**
-//     * page
-//     */
-//    public static <T extends PageResponse> T transfer(Page page, T response){
-//        response.setPageSize(page.getSize());
-//        response.setSize(page.getPages());
-//        response.setPageNo(page.getCurrent());
-//        response.setTotal(page.getTotal());
-//        response.setData(page.getRecords());
-//        return response;
-//    }
-//
-//    public static PageResponse transfer(int pageSize, int pageNo, List list){
-//        PageResponse response = new PageResponse();
-//        response.setPageSize(pageSize);
-//        response.setPageNo(pageNo);
-//        response.setTotal(list.size());
-//        response.setSize(list.size()%pageSize==0 ? list.size()/pageSize : list.size()/pageSize+1);
-//
-//        if (list.size()<pageSize && pageNo==1){
-//            response.setData(list);
-//        }else if (list.size()<pageNo*pageSize && list.size()>(pageNo-1)*pageSize){
-//            response.setData(list.subList((pageNo-1)*pageSize,-1));
-//        }else if (list.size()>pageNo*pageSize){
-//            response.setData(list.subList((pageNo-1)*pageSize,pageNo*pageSize));
-//        }else {
-//            response.setData(null);
-//        }
-//
-//        return response;
-//    }
+    /**
+     * page
+     */
+    public static <T extends PageResponse> T transfer(Page page, T response){
+        response.setPageSize(page.getSize());
+        response.setSize((int) page.getPages());
+        response.setPageNo(page.getCurrent());
+        response.setTotal((int) page.getTotal());
+        response.setData(page.getRecords());
+        return response;
+    }
+
+    public static PageResponse transfer(int pageSize, int pageNo, List list){
+        PageResponse response = new PageResponse();
+        response.setPageSize(pageSize);
+        response.setPageNo(pageNo);
+        response.setTotal(list.size());
+        response.setSize(list.size()%pageSize==0 ? list.size()/pageSize : list.size()/pageSize+1);
+
+        if (list.size()<pageSize && pageNo==1){
+            response.setData(list);
+        }else if (list.size()<pageNo*pageSize && list.size()>(pageNo-1)*pageSize){
+            response.setData(list.subList((pageNo-1)*pageSize,-1));
+        }else if (list.size()>pageNo*pageSize){
+            response.setData(list.subList((pageNo-1)*pageSize,pageNo*pageSize));
+        }else {
+            response.setData(null);
+        }
+
+        return response;
+    }
 
     /**
      * Description: 使用反射，完成pojo到vo的映射

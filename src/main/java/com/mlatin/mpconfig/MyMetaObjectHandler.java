@@ -1,11 +1,10 @@
-package com.mlatin.config;
+package com.mlatin.mpconfig;
 
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.mlatin.common.utils.IdUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
