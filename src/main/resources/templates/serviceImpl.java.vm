@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @since ${date}
  */
 @Service
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 public class ${table.serviceImplName} extends ServiceImpl<${table.mapperName}, ${entity}> implements ${table.serviceName} {
 
 }
