@@ -2,24 +2,16 @@ package com.mlatin.facade;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.mapper.Condition;
-import com.baomidou.mybatisplus.mapper.Wrapper;
-import com.google.gson.Gson;
 import com.mlatin.codegen.entity.SpccGoods;
-import com.mlatin.codegen.entity.SpccShopGoods;
 import com.mlatin.service.SpccGoodsService;
 import com.mlatin.service.SpccShopGoodsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
@@ -33,20 +25,17 @@ public class GoodsFacade {
 
     @Resource
     private SpccGoodsService spccGoodsService;
-    @Resource
-    private SpccShopGoodsService spccShopGoodsService;
 
     public Page list(int pageNo, int pageSize) {
-        QueryWrapper<SpccShopGoods> queryWrapper = new QueryWrapper<>();
-        Page page = spccShopGoodsService.page(new Page<>(1, 10), queryWrapper
+        QueryWrapper<SpccGoods> queryWrapper = new QueryWrapper<>();
+        Page page = spccGoodsService.page(new Page<>(1, 10), queryWrapper
                 .select("goodsNo")
-                .eq("customerId","JNYHC01")
                 .eq("online",true)
                 .eq("display",true)
         );
 
-        List<SpccShopGoods> records = page.getRecords();
-        List<String> goodsNos = records.stream().map(SpccShopGoods::getGoodsNo).collect(toList());
+        List<SpccGoods> records = page.getRecords();
+        List<String> goodsNos = records.stream().map(SpccGoods::getGoodsNo).collect(toList());
 
         List<SpccGoods> byGoodsNos = findByGoodsNos(goodsNos);
 

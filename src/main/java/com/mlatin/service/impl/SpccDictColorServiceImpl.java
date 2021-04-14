@@ -1,7 +1,5 @@
 package com.mlatin.service.impl;
 
-import com.mlatin.codegen.entity.SpccDictColor;
-import com.mlatin.codegen.dao.SpccDictColorDao;
 import com.mlatin.service.SpccDictColorService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,5 @@
 package com.mlatin.service;
 
-import com.mlatin.codegen.entity.SpccDictSize;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

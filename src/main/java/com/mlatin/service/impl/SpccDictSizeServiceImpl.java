@@ -1,7 +1,5 @@
 package com.mlatin.service.impl;
 
-import com.mlatin.codegen.entity.SpccDictSize;
-import com.mlatin.codegen.dao.SpccDictSizeDao;
 import com.mlatin.service.SpccDictSizeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

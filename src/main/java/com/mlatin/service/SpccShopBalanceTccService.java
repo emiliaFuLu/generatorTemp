@@ -1,6 +1,5 @@
 package com.mlatin.service;
 
-import com.mlatin.codegen.entity.SpccShopBalanceTcc;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

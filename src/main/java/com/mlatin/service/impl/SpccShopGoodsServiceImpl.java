@@ -1,7 +1,5 @@
 package com.mlatin.service.impl;
 
-import com.mlatin.codegen.entity.SpccShopGoods;
-import com.mlatin.codegen.dao.SpccShopGoodsDao;
 import com.mlatin.service.SpccShopGoodsService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
