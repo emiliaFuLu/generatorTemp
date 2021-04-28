@@ -3,7 +3,7 @@
 <mapper namespace="com.mlatin.codegen.mapper.SpccGoodsSkuDao">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.mlatin.codegen.entity.SpccGoodsSku">
+    <resultMap id="BaseResultMap" type="com.mlatin.codegen.mapper.SpccGoodsSku">
         <result column="id" property="id" />
         <result column="archive" property="archive" />
         <result column="goodsNo" property="goodsNo" />

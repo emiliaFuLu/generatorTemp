@@ -1,7 +1,9 @@
 package com.mlatin.common.exception;
 
 /**
- * Created by didi on 2017/7/10.
+ *
+ * @author fulu
+ * @date 2020-04-28
  */
 public class BusinessException extends RuntimeException implements ApiErrors {
     /**

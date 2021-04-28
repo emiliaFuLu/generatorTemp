@@ -1,7 +1,6 @@
 package com.mlatin.service;
 
-import com.mlatin.codegen.entity.${entity};
-import com.baomidou.mybatisplus.extension.service.IService;
+${entity};
 
 /**
  * $!{table.comment} 服务类

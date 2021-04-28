@@ -1,4 +1,4 @@
-package com.mlatin.codegen.entity;
+package com.mlatin.codegen.mapper;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

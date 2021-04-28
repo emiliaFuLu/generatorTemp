@@ -1,6 +1,6 @@
 package com.mlatin.service;
 
-import com.mlatin.codegen.entity.SpccGoodsSku;
+import com.mlatin.codegen.mapper.SpccGoodsSku;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

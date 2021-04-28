@@ -4,9 +4,8 @@ package com.mlatin.facade;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mlatin.codegen.entity.SpccGoods;
+import com.mlatin.codegen.mapper.SpccGoods;
 import com.mlatin.service.SpccGoodsService;
-import com.mlatin.service.SpccShopGoodsService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

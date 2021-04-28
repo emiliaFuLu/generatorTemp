@@ -11,7 +11,7 @@ mybatis-plus:
   # xml
   mapper-locations: classpath:mapper/*Mapper.xml
   # 实体类扫描，多个的话用逗号或者分号隔开隔开
-  type-aliases-package: com.mlatin.codegen.entity
+  type-aliases-package: com.mlatin.codegen.mapper
   # 枚举扫描类  # 支持统配符 * 或者 ; 分割
   type-enums-package:  com.mlatin.enums
   global-config:

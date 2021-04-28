@@ -1,6 +1,6 @@
 package com.mlatin.service;
 
-import com.mlatin.codegen.entity.OrderInfoExt;
+import com.mlatin.codegen.mapper.OrderInfoExt;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

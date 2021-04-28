@@ -3,7 +3,7 @@
 <mapper namespace="com.mlatin.codegen.mapper.OrderInfoDao">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.mlatin.codegen.entity.OrderInfo">
+    <resultMap id="BaseResultMap" type="com.mlatin.codegen.mapper.OrderInfo">
         <result column="id" property="id" />
         <result column="order_id" property="orderId" />
         <result column="order_name" property="orderName" />

@@ -1,7 +1,6 @@
 package com.mlatin.codegen.dao;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mlatin.codegen.entity.${entity};
+${entity};
 
 /**
  * $!{table.comment} Mapper 接口

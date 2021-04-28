@@ -1,12 +1,11 @@
-package com.mlatin.codegen.entity;
+package com.mlatin.codegen.mapper;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-import java.io.Serializable;
+
 import java.time.LocalDateTime;
 
 
@@ -19,24 +18,15 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class SpccGoodsSkc extends BaseModel<SpccGoodsSkc> {
+public class OrderInfo extends BaseModel<OrderInfo> {
 
     
-    @TableField("goodsNo")
-    private String goodsNo;
+    private String orderId;
 
-    @TableField("colorID")
-    private String colorID;
-
-    private String img;
-
-    private Boolean erp;
+    private String orderName;
 
     @TableField(value = "createdAt", fill = FieldFill.INSERT)
     private LocalDateTime createdAt;
-
-    @TableField(value = "updatedAt", fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime updatedAt;
 
 
 

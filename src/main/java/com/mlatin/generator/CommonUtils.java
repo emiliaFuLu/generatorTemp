@@ -17,7 +17,7 @@ import com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine;
 import com.baomidou.mybatisplus.generator.engine.BeetlTemplateEngine;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
-import com.mlatin.codegen.entity.BaseModel;
+import com.mlatin.codegen.mapper.BaseModel;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;

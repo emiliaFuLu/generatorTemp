@@ -1,9 +1,8 @@
 package com.mlatin.service.impl;
 
-import com.mlatin.codegen.entity.${entity};
-import com.mlatin.codegen.dao.${table.mapperName};
-import com.mlatin.service.${table.serviceName};
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+${entity};
+    ${table.mapperName};
+    ${table.serviceName};
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 /**

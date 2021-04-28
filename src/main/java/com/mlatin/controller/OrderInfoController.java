@@ -1,13 +1,14 @@
 package com.mlatin.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
-
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author Lu Fu
@@ -15,6 +16,8 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 @RequestMapping("/orderInfo")
+@Slf4j
+@Validated
 public class OrderInfoController {
 
 }

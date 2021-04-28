@@ -1,10 +1,11 @@
 package com.mlatin.codegen.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mlatin.codegen.entity.OrderInfo;
+import com.mlatin.codegen.mapper.OrderInfo;
 
 /**
- *  Mapper 接口
+ * Mapper 接口
+ *
  * @author Lu Fu
  * @since 2020-11-19
  */
