@@ -26,7 +26,7 @@ public class SpccGoodsServiceImpl extends ServiceImpl<SpccGoodsDao, SpccGoods> i
         LambdaQueryWrapper<SpccGoods> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(SpccGoods::getYear, year)
                 .eq(BaseModel::getArchive, false);
-        
+
         return baseMapper.selectList(wrapper);
     }
 }
