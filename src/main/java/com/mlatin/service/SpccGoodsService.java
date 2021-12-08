@@ -14,4 +14,8 @@ public interface SpccGoodsService extends IService<SpccGoods> {
 
     List<SpccGoods> getByYear(String year);
 
+    List<SpccGoods> getByBrand(String brand);
+
+    List<SpccGoods> getBySeason(String season);
+
 }
